@@ -12,7 +12,7 @@ struct PostVIPBadge: View {
     let vip: Bool
     
     var body: some View {
-        Group{
+        Group{//放在一个分组里
             if vip {
                 Text("v")
                 .bold()

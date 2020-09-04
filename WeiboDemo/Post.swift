@@ -14,7 +14,8 @@ struct Postlist: Codable {
 
 
 //Data Model
-struct Post: Codable{
+//结构体少一个属性还可以解析，多一个或者对不上就会解析失败
+struct Post: Codable{//Codable协议，既可解码又可以编码
     let id: Int
     let avatar: String //头像,图片名称
     let vip: Bool
@@ -53,13 +54,19 @@ extension Post{
 
 let postList = loadPostListData(fileName: "PostListData_recommend_1.json")
 
+//解析微博的数据文件
 func loadPostListData(fileName: String)->Postlist{
+    //从文件夹里取装着json的文件
+    //guard保证=后面能取到，否则抛出异常；Bundle是一个文件夹
     guard let url = Bundle.main.url(forResource: fileName, withExtension: nil)else{
         fatalError("Can not find \(fileName) in main bundle")
     }
+    //从文件读取json数据
+    //try?表示取不到就返回空
     guard let data = try? Data(contentsOf: url) else {
         fatalError("Can not find \(url)")
     }
+    //JSONDecoder来解析JSON，Postlist.self类似于java里的Postlist.class表示这个类型
     guard let list = try? JSONDecoder().decode(Postlist.self, from: data) else{
         fatalError("Can not parse post list json data")
     }
