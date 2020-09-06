@@ -51,7 +51,7 @@ struct PostCell: View {
                             //overlay在一个view上叠加另一个view，RoundedRectangle表示圆角矩形，stroke表示画一个边框
                         .overlay(RoundedRectangle(cornerRadius: 13)
                             .stroke(Color.orange,lineWidth: 1))
-                    }
+                    }.buttonStyle(BorderlessButtonStyle())
                 }
             }
             
@@ -59,14 +59,10 @@ struct PostCell: View {
                 .font(.system(size: 17))
             
             if !post.images.isEmpty {
-                loadImage(name: post.images[0])
-                .resizable()
-                .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width - 30,height: (UIScreen.main.bounds.width - 30) * 0.75)
-                .clipped()
+                PostImageCell(images: post.images, width: UIScreen.main.bounds.width - 30)
             }
             
-            Divider()
+            Divider()   //分割线
             
             HStack(spacing: 0){
                 Spacer()
@@ -90,7 +86,12 @@ struct PostCell: View {
                 Spacer()
             }
             
+            Rectangle()//矩形
+                .padding(.horizontal, -15)//水平方向上两边收缩-15的距离
+                .frame(height: 10)//高度为10
+                .foregroundColor(Color(red: 238/255, green: 238/255, blue: 238/255))//颜色为灰色
         }.padding(.horizontal,15)
+            .padding(.top, 15)
     }
 }
 

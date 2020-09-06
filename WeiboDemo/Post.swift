@@ -15,7 +15,7 @@ struct Postlist: Codable {
 
 //Data Model
 //结构体少一个属性还可以解析，多一个或者对不上就会解析失败
-struct Post: Codable{//Codable协议，既可解码又可以编码
+struct Post: Codable, Identifiable{//Codable协议，既可解码又可以编码, Identifiable表示必须有ID
     let id: Int
     let avatar: String //头像,图片名称
     let vip: Bool
@@ -38,7 +38,7 @@ extension Post{
         return loadImage(name: avatar)
     }
     
-    //只读属性
+    //只读属性，只能被赋值
     var commentCountText: String{
         if commentCount <= 0 {return "评论"}
         if commentCount < 1000 {return "\(commentCount)"}
@@ -75,4 +75,10 @@ func loadPostListData(fileName: String)->Postlist{
 
 func loadImage(name: String)->Image{
     return Image(uiImage: UIImage(named: name)!)
+}
+
+struct Post_Previews: PreviewProvider {
+    static var previews: some View {
+        Text("Hello, Worl!")
+    }
 }

@@ -12,18 +12,19 @@ struct PostCellToolbarButton: View {
     let image: String
     let text: String
     let color: Color
-    let action: () -> Void
+    let action: () -> Void //closure闭包
     var body: some View {
         Button(action: action){
             HStack(spacing: 5){
-                Image(systemName: image)
+                Image(systemName: image) //systemName系统图片
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFit()//适应整个空间，用fit不会超出屏幕的范围，fill会
                     .frame(width: 18,height: 18)
                 Text(text)
                     .font(.system(size: 15))
             }
         }
+        .buttonStyle(BorderlessButtonStyle())
         .foregroundColor(color)
     }
 }

@@ -101,6 +101,11 @@
 		E439F413246E2DC100D970CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E439F412246E2DC100D970CB /* Preview Assets.xcassets */; };
 		E439F416246E2DC100D970CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E439F414246E2DC100D970CB /* LaunchScreen.storyboard */; };
 		E439F41E246E3A4700D970CB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439F41D246E3A4700D970CB /* PostCell.swift */; };
+		E43EB9502504F5A2002F3F40 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EB94F2504F5A2002F3F40 /* PostDetailView.swift */; };
+		E43EB9522504F96B002F3F40 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EB9512504F96B002F3F40 /* HomeNavigationBar.swift */; };
+		E43EB95425051A84002F3F40 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EB95325051A84002F3F40 /* HomeView.swift */; };
+		E43EB95625051E33002F3F40 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EB95525051E33002F3F40 /* UserData.swift */; };
+		E441EADE25048EDB004C2C07 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E441EADD25048EDB004C2C07 /* PostImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +205,11 @@
 		E439F415246E2DC100D970CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E439F417246E2DC100D970CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E439F41D246E3A4700D970CB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		E43EB94F2504F5A2002F3F40 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		E43EB9512504F96B002F3F40 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		E43EB95325051A84002F3F40 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E43EB95525051E33002F3F40 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		E441EADD25048EDB004C2C07 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +340,11 @@
 				E423253A246E7EBA00BB9B7A /* PostCellToolbarButton.swift */,
 				E4232538246E614600BB9B7A /* Post.swift */,
 				E423253C246E8FD300BB9B7A /* PostListView.swift */,
+				E43EB9512504F96B002F3F40 /* HomeNavigationBar.swift */,
+				E43EB95325051A84002F3F40 /* HomeView.swift */,
+				E43EB95525051E33002F3F40 /* UserData.swift */,
+				E43EB94F2504F5A2002F3F40 /* PostDetailView.swift */,
+				E441EADD25048EDB004C2C07 /* PostImageCell.swift */,
 				E4232536246E5F8700BB9B7A /* PostVIPBadge.swift */,
 				E439F40F246E2DC100D970CB /* Assets.xcassets */,
 				E439F414246E2DC100D970CB /* LaunchScreen.storyboard */,
@@ -501,13 +516,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43EB95625051E33002F3F40 /* UserData.swift in Sources */,
 				E439F40A246E2DBF00D970CB /* AppDelegate.swift in Sources */,
+				E43EB9502504F5A2002F3F40 /* PostDetailView.swift in Sources */,
 				E439F40C246E2DBF00D970CB /* SceneDelegate.swift in Sources */,
 				E423253D246E8FD300BB9B7A /* PostListView.swift in Sources */,
 				E439F40E246E2DBF00D970CB /* ContentView.swift in Sources */,
 				E423253B246E7EBA00BB9B7A /* PostCellToolbarButton.swift in Sources */,
 				E4232539246E614600BB9B7A /* Post.swift in Sources */,
+				E43EB9522504F96B002F3F40 /* HomeNavigationBar.swift in Sources */,
 				E439F41E246E3A4700D970CB /* PostCell.swift in Sources */,
+				E43EB95425051A84002F3F40 /* HomeView.swift in Sources */,
+				E441EADE25048EDB004C2C07 /* PostImageCell.swift in Sources */,
 				E4232537246E5F8700BB9B7A /* PostVIPBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
