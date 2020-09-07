@@ -12,7 +12,7 @@ private let kLabelWidth: CGFloat = 60 //一般常量会用k开头
 private let kButtonHeight: CGFloat = 24
 
 struct HomeNavigationBar: View {
-    @State var leftPercent: CGFloat //0 for left, 1 for right @State指这个变量能够更新
+    @State var leftPercent: CGFloat //0 for left, 1 for right @State当这个变量更新了该View就会更新
     
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
